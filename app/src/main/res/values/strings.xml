@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Test_Activity</string>
+    <string name="Start_page_test_activity">Test Activity</string>
+    <string name="Start_page_repository">Repository</string>
+    <string name="Test_text_question">Chose the correct one:</string>
+    <string name="Test_text_plus_sign">+</string>
+    <string name="Test_text_equal_sign">=</string>
+    <string name="Test_text_questionmark_sign">?</string>
+    <string name="Test_text_next">Next</string>
+    <string name="Test_text_submit">Submit</string>
+</resources>
