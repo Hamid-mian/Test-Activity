@@ -2,6 +2,7 @@ package com.example.test_activity;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+
 
 public class learningActivity extends AppCompatActivity {
 
@@ -24,7 +28,8 @@ public class learningActivity extends AppCompatActivity {
     String mDescription[] = {"Facebook Description", "Whatsapp Description", "Twitter Description", "Instagram Description", "Youtube Description","Linkedin Description", "Github Description", "Tiktok Description", "Viber Description", "Google Description"};
     int images[] = {R.drawable.facebook, R.drawable.whatsapp, R.drawable.twitter, R.drawable.instagram, R.drawable.youtube,R.drawable.linkdin, R.drawable.github, R.drawable.tiktok, R.drawable.viber, R.drawable.google};
 
-
+    AlertDialog.Builder builder;
+    AlertDialog alertDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,227 @@ public class learningActivity extends AppCompatActivity {
 
         MyAdapter adapter = new MyAdapter(this, mTitle, mDescription, images);
         listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position ==  0) {
+                    builder = new AlertDialog.Builder(learningActivity.this);
+                    builder.setMessage("About Face book");
+                    builder.setTitle("FaceBook Description");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int asdf)
+                        {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+                    alertDialog = builder.create();
+                    alertDialog.show();               }
+                if (position ==  1) {
+                    builder = new AlertDialog.Builder(learningActivity.this);
+                    builder.setMessage("Do You want to change Image");
+                    builder.setTitle("Whatsapp Description");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int asdf)
+                        {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+                    alertDialog = builder.create();
+                    alertDialog.show();               }
+                if (position ==  2) {
+
+                    builder = new AlertDialog.Builder(learningActivity.this);
+                    builder.setMessage("Do You want to change Image");
+                    builder.setTitle("Twitter Description");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int asdf)
+                        {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+                    alertDialog = builder.create();
+                    alertDialog.show();            }
+                if (position ==  3) {
+
+                    builder = new AlertDialog.Builder(learningActivity.this);
+                    builder.setMessage("Do You want to change Image");
+                    builder.setTitle("Instagram Description");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int asdf)
+                        {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+                    alertDialog = builder.create();
+                    alertDialog.show();             }
+                if (position ==  4) {
+                    builder = new AlertDialog.Builder(learningActivity.this);
+                    builder.setMessage("Do You want to change Image");
+                    builder.setTitle("Youtube Description");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int asdf)
+                        {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+                    alertDialog = builder.create();
+                    alertDialog.show();}
+                    if (position ==  5) {
+                        builder = new AlertDialog.Builder(learningActivity.this);
+                        builder.setMessage("Do You want to change Image");
+                        builder.setTitle("Linkedin Description");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int asdf)
+                            {
+                                finish();
+                            }
+                        });
+                        builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which)
+                            {
+                                dialog.cancel();
+                            }
+                        });
+                        alertDialog = builder.create();
+                        alertDialog.show();}
+                        if (position ==  6) {
+                            builder = new AlertDialog.Builder(learningActivity.this);
+                            builder.setMessage("Do You want to change Image");
+                            builder.setTitle("Github Description");
+                            builder.setCancelable(false);
+                            builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int asdf)
+                                {
+                                    finish();
+                                }
+                            });
+                            builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    dialog.cancel();
+                                }
+                            });
+                            alertDialog = builder.create();
+                            alertDialog.show();}
+                            if (position ==  7) {
+                                builder = new AlertDialog.Builder(learningActivity.this);
+                                builder.setMessage("Do You want to change Image");
+                                builder.setTitle("Tiktok Description");
+                                builder.setCancelable(false);
+                                builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int asdf)
+                                    {
+                                        finish();
+                                    }
+                                });
+                                builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which)
+                                    {
+                                        dialog.cancel();
+                                    }
+                                });
+                                alertDialog = builder.create();
+                                alertDialog.show();}
+                                if (position ==  8) {
+                                    builder = new AlertDialog.Builder(learningActivity.this);
+                                    builder.setMessage("Do You want to change Image");
+                                    builder.setTitle("viber Description");
+                                    builder.setCancelable(false);
+                                    builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int asdf)
+                                        {
+                                            finish();
+                                        }
+                                    });
+                                    builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which)
+                                        {
+                                            dialog.cancel();
+                                        }
+                                    });
+                                    alertDialog = builder.create();
+                                    alertDialog.show();}
+                                    if (position ==  9) {
+                                        builder = new AlertDialog.Builder(learningActivity.this);
+                                        builder.setMessage("Do You want to change Image");
+                                        builder.setTitle("Google Description");
+                                        builder.setCancelable(false);
+                                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int asdf) {
+                                                finish();
+                                            }
+                                        });
+                                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                                        alertDialog = builder.create();
+                                        alertDialog.show();
+                                    }
+
+            }
+        });
+
+
 
     }
 
