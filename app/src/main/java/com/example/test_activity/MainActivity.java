@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         Intent intent;
-        Intent intent1;
+        Intent intent1,intent2;
         switch (v.getId()) {
             case R.id.repository:
                 intent = new Intent(MainActivity.this, Repository.class);
@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 intent1 = new Intent(MainActivity.this, Test_Activity.class);
                 startActivity(intent1);
                 break;
+            case R.id.learn_button:
+                intent2 =new Intent(MainActivity.this,learningActivity.class);
+                startActivity(intent2);
 
         } }
 }

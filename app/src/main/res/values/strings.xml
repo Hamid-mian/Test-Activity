@@ -2,6 +2,7 @@
     <string name="app_name">Test_Activity</string>
     <string name="Start_page_test_activity">Test Activity</string>
     <string name="Start_page_repository">Repository</string>
+    <string name="Start_page_learning">Social App</string>
     <string name="Test_text_question">Chose the correct one:</string>
     <string name="Test_text_plus_sign">+</string>
     <string name="Test_text_equal_sign">=</string>
